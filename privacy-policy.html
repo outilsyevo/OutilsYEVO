@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité - BoondManager for HelloWork</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #1976d2;
+            border-bottom: 2px solid #1976d2;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #424242;
+            margin-top: 30px;
+        }
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .contact {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Politique de Confidentialité</h1>
+    <p class="last-updated">Dernière mise à jour : <span id="date"></span></p>
+    
+    <h2>1. Introduction</h2>
+    <p>BoondManager for HelloWork ("l'extension") est une extension de navigateur qui permet d'intercepter automatiquement les téléchargements de CV depuis HelloWork et de les envoyer à BoondManager via Make.</p>
+    <p>Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos données.</p>
+    
+    <h2>2. Données collectées</h2>
+    <p>L'extension collecte les données suivantes :</p>
+    <ul>
+        <li><strong>CV téléchargés</strong> : Les fichiers PDF de CV téléchargés depuis HelloWork</li>
+        <li><strong>Informations de session BoondManager</strong> : Identifiant utilisateur, nom, email (pour identifier l'utilisateur qui télécharge le CV)</li>
+        <li><strong>Données de profil candidat</strong> : Informations extraites des profils HelloWork (nom, email, téléphone, etc.)</li>
+        <li><strong>Préférences de l'extension</strong> : Paramètres stockés localement dans le navigateur</li>
+    </ul>
+    
+    <h2>3. Utilisation des données</h2>
+    <p>Les données collectées sont utilisées uniquement pour :</p>
+    <ul>
+        <li>Envoyer les CV à BoondManager via Make pour créer ou mettre à jour les profils candidats</li>
+        <li>Identifier l'utilisateur BoondManager qui effectue le téléchargement</li>
+        <li>Afficher des notifications à l'utilisateur concernant le statut de l'envoi (candidat créé, candidat existant, erreur)</li>
+        <li>Améliorer le fonctionnement de l'extension</li>
+    </ul>
+    
+    <h2>4. Stockage des données</h2>
+    <p>Les données sont stockées de la manière suivante :</p>
+    <ul>
+        <li><strong>Stockage local</strong> : Les préférences et sessions sont stockées localement dans le navigateur via <code>chrome.storage.local</code>. Ces données restent sur votre appareil et ne sont jamais transmises à nos serveurs.</li>
+        <li><strong>Transmission à Make</strong> : Les CV sont envoyés à Make (webhook) pour traitement automatique. Make agit comme intermédiaire pour envoyer les données à BoondManager.</li>
+        <li><strong>Transmission à BoondManager</strong> : Les CV et données de profil sont finalement envoyés à BoondManager pour création des profils candidats.</li>
+        <li><strong>Aucun stockage sur nos serveurs</strong> : Nous ne stockons aucune donnée sur nos propres serveurs.</li>
+    </ul>
+    
+    <h2>5. Partage des données</h2>
+    <p>Les données sont partagées uniquement avec :</p>
+    <ul>
+        <li><strong>Make</strong> (hook.eu2.make.com) : Service d'automatisation utilisé pour traiter et transmettre les CV à BoondManager</li>
+        <li><strong>BoondManager</strong> (ui.boondmanager.com) : Plateforme de recrutement où les profils candidats sont créés</li>
+    </ul>
+    <p>Nous ne vendons, ne louons ni ne partageons vos données avec des tiers à des fins commerciales.</p>
+    
+    <h2>6. Sécurité des données</h2>
+    <p>Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos données :</p>
+    <ul>
+        <li>Les données sont transmises via HTTPS (connexions sécurisées)</li>
+        <li>Les CV sont convertis en base64 avant transmission</li>
+        <li>Les sessions BoondManager sont stockées localement et ne sont jamais exposées</li>
+    </ul>
+    
+    <h2>7. Vos droits</h2>
+    <p>Vous avez le droit de :</p>
+    <ul>
+        <li><strong>Supprimer vos données</strong> : Vous pouvez supprimer toutes les données stockées localement en désinstallant l'extension</li>
+        <li><strong>Accéder à vos données</strong> : Les données stockées localement sont accessibles via les outils de développement du navigateur (chrome.storage.local)</li>
+        <li><strong>Désactiver l'extension</strong> : Vous pouvez désactiver ou désinstaller l'extension à tout moment</li>
+    </ul>
+    
+    <h2>8. Cookies et technologies similaires</h2>
+    <p>L'extension utilise les cookies de session BoondManager pour maintenir votre authentification. Ces cookies sont gérés par BoondManager et ne sont pas accessibles à d'autres sites.</p>
+    
+    <h2>9. Modifications de cette politique</h2>
+    <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications seront indiquées par une mise à jour de la date "Dernière mise à jour" en haut de cette page.</p>
+    
+    <h2>10. Contact</h2>
+    <div class="contact">
+        <p>Pour toute question concernant cette politique de confidentialité ou l'utilisation de vos données, veuillez nous contacter à :</p>
+        <p><strong>Email</strong> : contact@yevo.fr</p>
+    </div>
+    
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleDateString('fr-FR', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+    </script>
+</body>
+</html>
+
